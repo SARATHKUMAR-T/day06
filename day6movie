@@ -1,0 +1,54 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+
+
+class movie{
+
+    constructor(title,studio,rating,instances){
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+        this.instances=instances;
+
+    }
+    Rating(){
+        if(this.rating===undefined){
+            return "PG";
+        }
+    }
+    print(){
+        return `${this.title} 
+                ${this.studio}
+                ${this.rating}`;
+       
+    }
+    print1(){
+       for(i=0;i<this.instances.length;i++){
+           if(this.instances[i]=='PG'){
+            return (" the movie was too good and i wish everyone to watch it once ").spilit(" ");
+           }
+       }
+    }
+
+}
+var x=("movie was good PG").split(" ");
+var s1=new movie("VIKRAM","ZEE STUDIOS");
+var s2=new movie("Casino royale","Eonprodcutions","PG13",x);
+console.log(s2.print1());
+
+
+
+
+});
